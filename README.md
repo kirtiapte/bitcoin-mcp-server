@@ -8,6 +8,11 @@ This MCP Server provides an LLM interface for tracking Bitcoin prices using Coin
 ```bash
 ./mvnw clean package
 ```
+## Building the Server
+
+```bash
+./mvnw test
+```
 
 ## Configuration
 
