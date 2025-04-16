@@ -30,3 +30,9 @@ You will need to supply a configuration for the server for your MCP Client. Here
     },
 }
 ```
+
+## Deploy on to Cloud Foundry
+Login to Cloud Foundry instance 
+```bash
+cf push -f manifest.yml
+```
