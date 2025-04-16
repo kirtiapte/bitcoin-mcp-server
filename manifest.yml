@@ -1,0 +1,10 @@
+---
+applications:
+  - name: bitcoin-mcp-server
+    buildpacks:
+      - java_buildpack_offline
+    memory: 1G
+    instances: 1
+    path: target/bitcoinn-mcp-server-0.0.1-SNAPSHOT.jar
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 21.+ } }'
