@@ -36,3 +36,21 @@ Login to Cloud Foundry instance
 ```bash
 cf push -f manifest.yml
 ```
+### Binding to MCP Agents
+Model Context Protocol (MCP) servers are lightweight programs that expose specific capabilities to AI models through a standardized interface. These servers act as bridges between LLMs and external tools, data sources, or services, allowing your AI application to perform actions like searching databases, accessing files, or calling external APIs without complex custom integrations.
+
+### Create a user-provided service that provides the URL for an existing MCP server:
+```
+cf cups bitcoin-mcp-server -p '{"mcpServiceURL":"https://your-bitcoin-mcp-server.example.com"}'
+```
+### Bind the MCP service to your application:
+```
+cf bind-service ai-tool-chat bitcoin-mcp-server
+```
+### Restart your application:
+```
+cf restart ai-tool-chat
+```
+Your chatbot will now register with the research MCP agent, and the LLM will be able to invoke the agent's capabilities when responding to chat requests.
+
+
