@@ -51,6 +51,6 @@ cf bind-service ai-tool-chat bitcoin-mcp-server
 ```
 cf restart ai-tool-chat
 ```
-Your chatbot will now register with the research MCP agent, and the LLM will be able to invoke the agent's capabilities when responding to chat requests.
+Your chatbot will now register with the bitcoin MCP agent, and the LLM will be able to invoke the agent's capabilities when responding to chat requests.
 
 
